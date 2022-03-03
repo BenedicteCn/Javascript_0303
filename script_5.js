@@ -15,34 +15,21 @@ const books = [
 
 //1
 
-console.log("1/ Est-ce que tous les livres ont été au moins empruntés une fois ?")
-result1 = books.forEach(book =>{ if (book.rented > 1) console.log("Oui mon capichef");})
-
-//2
-
-console.log("2/ Quel est livre le plus emprunté ?")
-result2 = books.sort(function (a, b) {
-  return a.rented - b.rented;
-});
-console.log(result2.pop())
+console.log("1/ Est-ce que tous les livres ont été au moins empruntés une fois ?");
+result1 = books.forEach(book =>{ if (book.rented > 1) console.log("Oui mon capichef");});
 
 //3
 
-console.log("3/ Quel est livre le moins emprunté ?")
+console.log("3/ Quel est livre le moins emprunté ?");
 result3 = books.sort(function (a, b) {
   return b.rented - a.rented;
 });
-console.log(result3.pop())
+console.log(result3.pop());
 
 //4
 
-/*console.log("4/ Le livre avec l'ID: 873495 est")
-
-result4 = books.filter(el => {
-    return el.id === 873495
-  })
-
-console.log(result4)*/
+console.log("4/ Le livre avec l'ID: 873495 est");
+console.log(books.filter(x => x.id === 873495));
 
 //5
 
@@ -59,4 +46,12 @@ console.log("6/ Trie les livres par ordre alphabétique (sans celui avec l'ID 13
 result6 = books.sort(function(a,b){
   return a.title.localeCompare(b.title);
 })
-console.log(result6)
+console.log(result6);
+
+//2
+
+console.log("2/ Quel est livre le plus emprunté ?");
+result2 = books.sort(function (a, b) {
+  return a.rented - b.rented;
+});
+console.log(result2.pop());
